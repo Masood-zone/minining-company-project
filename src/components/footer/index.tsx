@@ -81,37 +81,15 @@ function Footer() {
                   info@demolink.org
                 </p>
               </div>
-              <button className="bg-blue-500 text-white font-bold py-4 mt-5 sm:py-6 md:py-6 px-6 sm:px-8 md:px-10 hover:bg-yellow-400 transition-colors duration-300 text-sm sm:text-base md:text-lg">
+              <button
+                onClick={() => (window.location.href = "/contact")}
+                className="bg-blue-500 text-white font-bold py-4 mt-5 sm:py-6 md:py-6 px-6 sm:px-8 md:px-10 hover:bg-yellow-400 transition-colors duration-300 text-sm sm:text-base md:text-lg"
+              >
                 REQUEST A QUOTE
               </button>
             </div>
 
             {/* Map Placeholder */}
-            {/* <div className="bg-gray-700 p-4 rounded-lg">
-              <div className="flex items-center mb-2">
-                <svg
-                  className="w-6 h-6 mr-2"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth={2}
-                    d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"
-                  />
-                </svg>
-                <h3 className="text-lg font-semibold">
-                  Oops! Something went wrong.
-                </h3>
-              </div>
-              <p className="text-sm text-gray-400">
-                This page didn't load Google Maps correctly. See the JavaScript
-                console for technical details.
-              </p>
-            </div> */}
             <div>
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15880.447091911736!2d-1.2794755!3d5.6969874!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xfdb9998d2004f49%3A0x459111bffee6e328!2sAkenten%20Appiah%20Menka%20University%20of%20Skills%20Training%20and%20Entrepreneurial%20Development!5e0!3m2!1sen!2sgh!4v1727833777212!5m2!1sen!2sgh"

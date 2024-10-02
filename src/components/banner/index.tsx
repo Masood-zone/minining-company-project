@@ -4,8 +4,10 @@ import {
   ParallaxBannerLayer,
 } from "react-scroll-parallax";
 import { ctaBg } from "../../assets/images";
+import { useNavigate } from "react-router-dom";
 
 export function ExperiseBanner() {
+  const navigate = useNavigate();
   return (
     <ParallaxProvider>
       <div className="relative h-full w-full overflow-hidden">
@@ -27,7 +29,10 @@ export function ExperiseBanner() {
               <p className="text-lg md:text-xl lg:text-2xl text-white mb-8 font-light md:text-left">
                 Efficient mining solutions for companies worldwide
               </p>
-              <button className="bg-yellow-500 text-white font-bold py-4 sm:py-6 md:py-8 px-6 sm:px-8 md:px-10 hover:bg-blue-400 transition-colors duration-300 text-sm sm:text-base md:text-lg">
+              <button
+                onClick={() => navigate("/services")}
+                className="bg-yellow-500 text-white font-bold py-4 sm:py-6 md:py-8 px-6 sm:px-8 md:px-10 hover:bg-blue-400 transition-colors duration-300 text-sm sm:text-base md:text-lg"
+              >
                 OUR SERVICES
               </button>
             </div>
