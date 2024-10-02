@@ -1,5 +1,5 @@
 import { AboutCompany } from "../../components/about";
-import ExpertiseBanner from "../../components/banner";
+import { ExperiseBanner } from "../../components/banner";
 import MiningCarousel from "../../components/carousel";
 import LatestProjectsCarousel from "../../components/carousel/latestProjectsCarousel";
 import OurClients from "../../components/clients";
@@ -20,7 +20,7 @@ function Home() {
       </section>
       {/* Expertise banner */}
       <section className="h-[500px] my-20">
-        <ExpertiseBanner />
+        <ExperiseBanner />
       </section>
       {/* Mining machinery */}
       <section className="py-12 px-10">

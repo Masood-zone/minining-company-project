@@ -1,15 +1,16 @@
+import { formsBg } from "../../assets/images";
 import { CompanyNotes, CompanyValues } from "../../components/about";
+import { PageBanner } from "../../components/banner";
 import { Breadcrumb } from "../../components/breadcrumb/breadcrumb";
 import OurClients from "../../components/clients";
 import OurTeam from "../../components/team";
-import AboutUsBanner from "./banner";
 import History from "./history";
 
 function About() {
   return (
     <main className="pt-20 mt-10">
       {/* Banner */}
-      <AboutUsBanner />
+      <PageBanner title="About Us" image={formsBg} />
       <Breadcrumb currentPage="About Us" />
       {/* Company Values */}
       <CompanyValues />
