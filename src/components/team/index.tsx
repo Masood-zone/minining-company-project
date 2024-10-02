@@ -125,7 +125,7 @@ export default function OurTeam() {
   };
 
   return (
-    <div className="min-h-screen py-12 flex items-center justify-center bg-gray-100">
+    <div className="min-h-screen py-12 flex items-center justify-center">
       <div className="max-w-6xl mx-auto px-4">
         <h2 className="text-3xl sm:text-4xl md:text-5xl mb-2 text-center font-bold">
           OUR TEAM

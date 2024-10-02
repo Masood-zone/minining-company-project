@@ -24,6 +24,7 @@ import project4 from "./project-10-570x370.jpg";
 
 // CTA Background
 import ctaBg from "./bg-cta.jpg";
+import formsBg from "./bg-forms-1.jpg";
 
 // Newsletter
 import newsletterBg from "./bg-forms-1.jpg";
@@ -56,5 +57,6 @@ export {
   project3,
   project4,
   ctaBg,
+  formsBg,
   newsletterBg,
 };

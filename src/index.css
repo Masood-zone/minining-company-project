@@ -25,3 +25,14 @@ h3 {
     url("https://ld-wt73.template-help.com/wt_prod-10987/theme/images/bg-footer-1.jpg")
     no-repeat center center/cover;
 }
+
+/* Animations */
+/* Add this to your global CSS file */
+@keyframes bgPos {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 100% 100%;
+  }
+}

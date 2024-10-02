@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
 import { Phone, MapPin, Facebook, Twitter, Instagram, X } from "lucide-react";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import { logo } from "../../assets/images";
 
 export default function MineralsNavbar() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
@@ -83,7 +84,10 @@ export default function MineralsNavbar() {
         </div>
       </div>
       <nav className="container mx-auto px-4 h-20 flex items-center justify-between">
-        <div className="flex items-center">
+        <div
+          className="flex items-center hover:cursor-pointer"
+          onClick={() => navigate("/")}
+        >
           <img src={logo} alt="Minerals Logo" className="w-10 h-10 mr-2" />
           <div className="flex flex-col items-start">
             <span className="text-xl font-bold">MINERALS</span>

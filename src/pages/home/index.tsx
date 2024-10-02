@@ -1,4 +1,4 @@
-import AboutCompany from "../../components/about";
+import { AboutCompany } from "../../components/about";
 import ExpertiseBanner from "../../components/banner";
 import MiningCarousel from "../../components/carousel";
 import LatestProjectsCarousel from "../../components/carousel/latestProjectsCarousel";
@@ -36,7 +36,7 @@ function Home() {
       </section>
       {/* Achievements won */}
       {/* Our Team */}
-      <section className="py-12">
+      <section className="py-12 ">
         <OurTeam />
       </section>
     </main>
