@@ -42,7 +42,7 @@ export default function AboutCompany() {
   //   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <div className="relative bg-white shadow-lg rounded-lg overflow-hidden mt-[-100px] mx-auto max-w-6xl z-10">
+    <div className="relative bg-white md:shadow-lg rounded-lg overflow-hidden md:mt-[-100px] mx-auto max-w-6xl z-10">
       <motion.div className="h-40 bg-gray-100">
         <div className="container mx-auto px-6 py-4 flex items-center justify-center h-full">
           <motion.h2 className="text-3xl font-bold flex items-center justify-center cursor-pointer">
@@ -119,7 +119,7 @@ export default function AboutCompany() {
                   <img
                     src={about2}
                     alt="Mining worker"
-                    className="w-full md:w-1/3 object-cover mb-4 md:mb-0 md:mr-6"
+                    className="w-full max-sm:h-44 md:w-1/3 object-cover mb-4 md:mb-0 md:mr-6"
                   />
                   <div>
                     <h3 className="font-bold text-2xl mb-4">Our Mission</h3>
@@ -153,7 +153,7 @@ export default function AboutCompany() {
                   <img
                     src={about1}
                     alt="Mined rocks"
-                    className="w-full md:w-1/3 object-cover mb-4 md:mb-0 md:mr-6"
+                    className="w-full max-sm:h-56 md:w-1/3 object-cover mb-4 md:mb-0 md:mr-6"
                   />
                   <div>
                     <h3 className="font-bold text-2xl mb-4">Our Vision</h3>
@@ -187,7 +187,7 @@ export default function AboutCompany() {
                   <img
                     src={about3}
                     alt="Mined rocks"
-                    className="w-full md:w-1/3 object-cover mb-4 md:mb-0 md:mr-6"
+                    className="w-full md:w-1/3 max-sm:h-44 object-cover mb-4 md:mb-0 md:mr-6"
                   />
                   <div>
                     <h3 className="font-bold text-2xl mb-4">

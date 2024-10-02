@@ -78,6 +78,11 @@ export default function WhatWeOfferSwiper() {
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
             breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 10,
+              },
+
               640: {
                 slidesPerView: 2,
                 spaceBetween: 20,
@@ -89,9 +94,9 @@ export default function WhatWeOfferSwiper() {
             }}
           >
             {offerItems.map((item) => (
-              <SwiperSlide key={item.id}>
-                <motion.div className="bg-white shadow-lg overflow-hidden ">
-                  <motion.div className="relative overflow-hidden h-52">
+              <SwiperSlide key={item.id} className="py-10">
+                <motion.div className="bg-white md:shadow-lg overflow-hidden sm:shadow-md shadow-md h-96">
+                  <motion.div className="relative overflow-hidden">
                     <motion.img
                       src={item.image}
                       alt={item.title}

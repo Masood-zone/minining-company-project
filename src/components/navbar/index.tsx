@@ -1,20 +1,38 @@
 import { useState, useEffect } from "react";
-import { Phone, MapPin, Facebook, Twitter, Instagram } from "lucide-react";
+import { Phone, MapPin, Facebook, Twitter, Instagram, X } from "lucide-react";
 import { Link, useLocation } from "react-router-dom";
 import { logo } from "../../assets/images";
 
 export default function MineralsNavbar() {
   const location = useLocation();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const handleMenuToggle = () => {
+    setIsMenuOpen((prev) => !prev);
+  };
 
   useEffect(() => {
+    // Close the isMenuOpen state when the user clicks on a link\
+    // in the mobile menu
+    if (isMenuOpen) {
+      window.addEventListener("click", (e) => {
+        if (
+          e.target instanceof HTMLElement &&
+          e.target.closest("a") &&
+          e.target.closest("a")?.getAttribute("href")
+        ) {
+          setIsMenuOpen(false);
+        }
+      });
+    }
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [isMenuOpen]);
 
   const navLinks = [
     { href: "/", label: "Home" },
@@ -83,7 +101,11 @@ export default function MineralsNavbar() {
             </NavLink>
           ))}
         </div>
-        <button className="md:hidden" aria-label="Open menu">
+        <button
+          onClick={handleMenuToggle}
+          className="md:hidden"
+          aria-label="Open menu"
+        >
           <svg
             className="w-6 h-6"
             fill="none"
@@ -100,6 +122,31 @@ export default function MineralsNavbar() {
           </svg>
         </button>
       </nav>
+
+      <div
+        className={`fixed top-0 left-0 right-0 bottom-0 bg-white z-40 transition-transform duration-300 transform ${
+          isMenuOpen ? "translate-x-0" : "translate-x-full"
+        }`}
+      >
+        <button
+          className="absolute top-4 right-4"
+          aria-label="Close menu"
+          onClick={handleMenuToggle}
+        >
+          <X className="w-6 h-6" />
+        </button>
+        <div className="container mx-auto px-4 h-full flex flex-col items-center justify-center space-y-6">
+          {navLinks.map(({ href, label }) => (
+            <NavLink
+              key={href}
+              href={href}
+              isActive={location.pathname === href}
+            >
+              {label}
+            </NavLink>
+          ))}
+        </div>
+      </div>
     </header>
   );
 }
@@ -116,7 +163,7 @@ function NavLink({
   return (
     <Link
       to={href}
-      className={`text-sm font-medium hover:text-blue-500 transition-colors ${
+      className={`text-lg uppercase font-medium hover:text-blue-500 transition-colors ${
         isActive ? "text-blue-500" : "text-gray-700"
       }`}
     >
