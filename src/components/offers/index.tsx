@@ -5,8 +5,9 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { offerItems } from "./data";
+import { services } from "./data";
 import { Link } from "react-router-dom";
+import { truncateText } from "../../utils/truncateText";
 
 export default function WhatWeOfferSwiper() {
   return (
@@ -49,7 +50,7 @@ export default function WhatWeOfferSwiper() {
               },
             }}
           >
-            {offerItems.map((item) => (
+            {services.map((item) => (
               <SwiperSlide key={item.id} className="py-10">
                 <motion.div className="bg-white md:shadow-lg overflow-hidden sm:shadow-md shadow-md h-96">
                   <motion.div className="relative overflow-hidden">
@@ -58,13 +59,13 @@ export default function WhatWeOfferSwiper() {
                       alt={item.title}
                       whileHover={{ scale: 1.05 }}
                       transition={{ duration: 0.3 }}
-                      className="w-full h-full object-cover"
+                      className="w-full h-48 object-cover"
                     />
                     <div className="absolute top-4 right-4 bg-blue-500 text-white rounded-full w-10 h-10 flex items-center justify-center text-lg font-bold">
                       {String(item.id).padStart(2, "0")}
                     </div>
                   </motion.div>
-                  <div className="p-6">
+                  <div className="p-3">
                     <h3 className="text-xl font-semibold mb-2">
                       <Link
                         className="hover:underline hover:cursor-pointer"
@@ -73,7 +74,9 @@ export default function WhatWeOfferSwiper() {
                         {item.title}
                       </Link>
                     </h3>
-                    <p className="text-gray-600">{item.description}</p>
+                    <p className="text-gray-600">
+                      {truncateText(item.description, 115)}
+                    </p>
                   </div>
                 </motion.div>
               </SwiperSlide>

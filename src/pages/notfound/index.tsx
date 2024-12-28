@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const NotFound = () => {
   return (
-    <div className="relative w-full h-screen bg-blue-400">
+    <div className="relative w-full h-screen bg-[#0f4de1]">
       <motion.div
         className="absolute inset-0 bg-cover bg-center"
         style={{
