@@ -31,7 +31,7 @@ export function ExperiseBanner() {
               </p>
               <button
                 onClick={() => navigate("/services")}
-                className="bg-yellow-500 text-white font-bold py-4 sm:py-6 md:py-8 px-6 sm:px-8 md:px-10 hover:bg-blue-400 transition-colors duration-300 text-sm sm:text-base md:text-lg"
+                className="bg-[#f0730c] text-white font-bold py-4 sm:py-6 md:py-8 px-6 sm:px-8 md:px-10 hover:bg-[#0f4de1] transition-colors duration-300 text-sm sm:text-base md:text-lg"
               >
                 OUR SERVICES
               </button>

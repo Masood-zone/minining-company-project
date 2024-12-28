@@ -90,8 +90,10 @@ export default function MiningCarousel() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.6, duration: 0.5 }}
-              className="bg-yellow-500 text-white font-bold py-4 sm:py-6 md:py-8 px-6 sm:px-8 md:px-10 hover:bg-blue-400 transition-colors duration-300 text-sm sm:text-base md:text-lg"
-              onClick={() => (window.location.href = "/services")}
+              className="bg-[#d26913] text-white font-bold py-4 sm:py-6 md:py-8 px-6 sm:px-8 md:px-10 hover:bg-[#0f4de1] transition-colors duration-300 text-sm sm:text-base md:text-lg"
+              onClick={() =>
+                (window.location.href = `/services/${slides[currentIndex].id}`)
+              }
             >
               VIEW MORE
             </motion.button>

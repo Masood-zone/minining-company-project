@@ -2,6 +2,7 @@ import { Outlet, useLocation } from "react-router-dom";
 import MineralsNavbar from "../components/navbar";
 import Footer from "../components/footer";
 import { useEffect } from "react";
+import ScrollToTopButton from "../components/navbar/scroll-to-top";
 
 function Layout() {
   const location = useLocation();
@@ -15,6 +16,7 @@ function Layout() {
       <MineralsNavbar />
       <Outlet />
       <Footer />
+      <ScrollToTopButton />
     </>
   );
 }
