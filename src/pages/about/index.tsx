@@ -5,7 +5,7 @@ import { PageBanner } from "../../components/banner";
 import { Breadcrumb } from "../../components/breadcrumb/breadcrumb";
 import OurClients from "../../components/clients";
 import OurTeam from "../../components/team";
-import History from "./history";
+import Awards from "./awards/awards";
 import Locations from "./location";
 
 function About() {
@@ -24,8 +24,8 @@ function About() {
       <section className="overflow-hidden">
         <OurTeam />
       </section>
-      {/* Our History */}
-      <History />
+      {/* Awards */}
+      <Awards />
       {/* Our Clients */}
       <OurClients />
     </main>
