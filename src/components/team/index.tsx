@@ -252,7 +252,7 @@ export default function OurTeam() {
                     key={`${member.name}-${index}`}
                     className={`w-full ${
                       displayCount === 1
-                        ? "max-w-sm mx-auto"
+                        ? "max-w-sm mx-auto "
                         : displayCount === 2
                         ? "w-1/2"
                         : displayCount === 3
