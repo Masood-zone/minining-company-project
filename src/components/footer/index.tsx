@@ -22,7 +22,7 @@ function Footer() {
                   </Link>
                 </div>
                 <Link
-                  to="/projects"
+                  to="/services"
                   className="block hover:underline hover:text-gray-300"
                 >
                   Projects
