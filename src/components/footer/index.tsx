@@ -4,7 +4,6 @@ import { Link } from "react-router-dom";
 function Footer() {
   return (
     <footer className="">
-      {/* Latest news*/}
       {/* Footer */}
       <footer className="bg-footer text-white">
         <div className="container mx-auto px-4 py-12">
@@ -78,7 +77,7 @@ function Footer() {
                         d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
                       />
                     </svg>
-                    info@demolink.org
+                    info@ramoth-services.com
                   </p>
                 </Link>
               </div>
