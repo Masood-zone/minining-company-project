@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { projects } from "../../components/offers/data";
 import {
@@ -16,14 +16,6 @@ function ProjectsIndex() {
   const { id } = useParams();
   const project = projects.find((project) => project.id === Number(id));
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const checkMobile = () => setIsMobile(window.innerWidth < 768);
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => window.removeEventListener("resize", checkMobile);
-  }, []);
 
   if (!project) {
     return <ServiceNotFound />;

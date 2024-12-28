@@ -207,7 +207,7 @@ export default function OurTeam() {
   }, [currentIndex, displayCount, startAutoPlay, stopAutoPlay]);
 
   const handleDragEnd = (
-    event: MouseEvent | TouchEvent,
+    _: MouseEvent | TouchEvent,
     info: { offset: { x: number; y: number } }
   ) => {
     if (info.offset.x > 100) {
