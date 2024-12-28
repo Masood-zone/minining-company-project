@@ -29,7 +29,6 @@ function Home() {
       <section className="bg-gray-100 py-16">
         <OurClients />
       </section>
-      {/* Achievements won */}
       {/* Our Team */}
       <section className="py-12 ">
         <OurTeam />
